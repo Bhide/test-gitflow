@@ -25,6 +25,9 @@ jobs:
         env:
           IOS_PROFILE_KEY: ${{ secrets.IOS_PROFILE_KEY }}
           
-      - name: Fastlane Setup
+      - name: Fastlane Action
+        uses: maierj/fastlane-action@v1.4.0
+        
+      - name: Setup Fastlane
         run: fastlane setup --verbose
 
