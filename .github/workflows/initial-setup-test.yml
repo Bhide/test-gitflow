@@ -1,0 +1,23 @@
+﻿name: inital setup test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      
+      - name: Install gpg
+        run: brew install gnupg
+        
+      - name: Switch XCode Version
+        run: sudo xcode-select -s /Applications/Xcode_11.2.app
+        
+      - name: Setup provisioning profile
+        run: ./.github/secrets/decrypt_secrets.sh
+        env:
+          IOS_PROFILE_KEY: ${{ secrets.IOS_PROFILE_KEY }}
