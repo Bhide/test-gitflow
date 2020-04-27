@@ -3,7 +3,7 @@ name: inital setup test
 on:
   push:
     branches:
-      - test-branch
+      - master
 
 jobs:
   build:
