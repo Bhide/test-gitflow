@@ -10,6 +10,8 @@ jobs:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v1
+        with:
+          ref: test-branch
       
       - name: Install gpg
         run: brew install gnupg
