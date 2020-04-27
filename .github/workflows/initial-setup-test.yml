@@ -1,9 +1,11 @@
 name: inital setup test
 
 on:
-  push:
-    branches:
-      - master
+  # push:
+  #   branches:
+  #     - master
+
+  repository_dispatch
 
 jobs:
   build:
