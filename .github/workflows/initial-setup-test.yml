@@ -17,10 +17,11 @@ jobs:
       - name: Switch XCode Version
         run: sudo xcode-select -s /Applications/Xcode_11.2.app
         
-        - name: Set Permissions for decrypt_secrets.sh file
+      - name: Set Permissions for decrypt_secrets.sh file
         run: chmod +x .github/secrets/decrypt_secrets.sh
         
       - name: Setup provisioning profile
         run: ./.github/secrets/decrypt_secrets.sh
         env:
           IOS_PROFILE_KEY: ${{ secrets.IOS_PROFILE_KEY }}
+
