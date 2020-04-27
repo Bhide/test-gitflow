@@ -24,4 +24,7 @@ jobs:
         run: ./.github/secrets/decrypt_secrets.sh
         env:
           IOS_PROFILE_KEY: ${{ secrets.IOS_PROFILE_KEY }}
+          
+      - name: Fastlane Setup
+        run: fastlane setup --verbose
 
