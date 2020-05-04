@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '10.0'
 use_frameworks!
 
 target 'Idee App' do
@@ -7,6 +7,7 @@ target 'Idee App' do
 end
 
 target 'Alumni ID' do
+  pod 'Kingfisher', '~> 5.0'
 end
 
 
