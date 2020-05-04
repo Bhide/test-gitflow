@@ -1,25 +1,125 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
+# More documentation about how to customize your build
+# can be found here:
+# https://docs.fastlane.tools
+fastlane_version "2.68.0"
 
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
+# This value helps us track success metrics for Fastfiles
+# we automatically generate. Feel free to remove this line
+# once you get things running smoothly!
+generated_fastfile_id "d52e9dcc-0a3c-40f2-b478-7ff62801a700"
 
-default_platform(:ios)
+default_platform :ios
 
-platform :ios do
-  desc "Test: Verify Xcode installation."
-  lane :exec_test do
-  	verify_xcode(xcode_path: "/Applications/Xcode.app")
+# Fastfile actions accept additional configuration, but
+# don't worry, fastlane will prompt you for required
+# info which you can add here later
+lane :vertical_app_build do
 
-    # add actions here: https://docs.fastlane.tools/actions
-  end
+  cocoapods(
+    clean: true
+    )
+
+  # increment_build_number
+
+  increment_build_number_in_plist(
+    target: ENV['TARGET']
+
+  	)
+
+  increment_build_number_in_plist(
+    target: ENV['TARGET_WIDGET']
+
+    )
+
+#   CONFIGURATION=Development
+# TARGET=Alumni ID
+# TARGET_WIDGET=Alumni ID Cards
+# BUNDLE_ID=io.id123.alumniid.dev
+# BUNDLE_ID_WIDGET=io.id123.alumniid.dev.idcards
+# PROVISIONING_PROFILE=83d1fbcd-7c19-4612-b1a2-329963ba4273
+# PROVISIONING_PROFILE_WIDGET=034a0e6f-37db-42c8-9f60-fe2c92b7af2a
+# CERTIFICATE=iPhone Distribution
+# TEAM_ID=6SPCVN67S3
+# IPA_FILE_NAME=Alumni ID-Dev.ipa
+
+# ./exportoptions.sh "6SPCVN67S3" "iPhone Distribution: ID123 Inc. (6SPCVN67S3)" "io.id123.alumniid.dev" "Alumni ID Development" "io.id123.alumniid.dev.idcards" "Alumni ID Cards Widget Development"
+
+
+  sh "cd ..; pwd; fastlane/exportoptions.sh #{ENV['TEAM_ID']} #{ENV['CERTIFICATE']} #{ENV['BUNDLE_ID']} #{ENV['PROVISIONING_PROFILE']} #{ENV['BUNDLE_ID_WIDGET']} #{ENV['PROVISIONING_PROFILE_WIDGET']}"
+
+  sh "cd ..; pwd; fastlane/build_app.sh #{ENV['CONFIGURATION']} #{ENV['PROVISIONING_PROFILE']} #{ENV['TARGET']}"
+
+
+
+  # build_app(
+  #   workspace: "Idee App.xcworkspace",
+  #   configuration: ENV['CONFIGURATION'],
+  #   scheme: ENV['TARGET'],
+  #   silent: true,
+  #   clean: true,
+  #   output_directory: "./build", # Destination directory. Defaults to current directory.
+  #   output_name: ENV['IPA_FILE_NAME'],       # specify the name of the .ipa file to generate (including file extension)
+  #   export_options: "./exportOptions.plist"
+  # )
+
+
+
+
+
+  # export_options("./exportOptions.plist")
+
+
+  # build_app(
+  #       workspace: "Idee App.xcworkspace",
+  #       scheme: ENV['TARGET'],
+  #       export_options: {
+  #               method: "ad-hoc",
+  #               provisioningProfiles: { 
+  #                       "io.id123.alumniid.dev" => "Alumni ID Development",
+  #                       "io.id123.alumniid.dev.idcards" => "Alumni ID Cards Widget Development"
+  #   },
+  #       signingCertificate: "8791A672216195B2607D0108228554C479A1C805",
+  #       signingStyle: "manual",
+  #       teamID: "6SPCVN67S3",
+  #       thinning: "<none>",
+  #       stripSwiftSymbols: true,
+
+  # }
+
+
+  # )
+
+#   firebase_app_distribution(
+#             app: "1:745898852658:ios:f0a03a07fbf651871cd72b",
+#             groups: "QA",
+#             release_notes: "Automated build upload via Fastlane",
+#             ipa_path: "/Users/samir/Documents/Vertical App Builds/Alumni ID/dev/Alumni ID.ipa"
+# )
+
+#   slack(
+#   message: "New Version of Alumni ID Dev Released. Uploaded to Firebase.",
+#   success: true,        # Optional, defaults to true.
+#   payload: {  # Optional, lets you specify any number of your own Slack attachments.
+#     "Build Date" => Time.new.to_s,
+#     "Built by" => "Fastlane",
+#   },
+#   slack_url: "https://hooks.slack.com/services/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"
+  
+# )
+  
 end
+
+lane :exec_test do
+	verify_xcode(xcode_path: "/Applications/Xcode.app")
+end
+
+  # upload to Beta by Crashlytics
+  #crashlytics(
+    # api_token: "YOUR_API_KEY",
+    # build_secret: "YOUR_BUILD_SECRET"
+  #)
+
+  # slack(
+  #   slack_url: "https://hooks.slack.com/services/IDS"
+  # )
+
