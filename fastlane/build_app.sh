@@ -7,11 +7,11 @@ echo $2
 echo $3
 
 echo "-----------------BUILD STARTED--------------------"
-xcodebuild -UseModernBuildSystem=NO -scheme "Alumni ID" -workspace "Idee App.xcworkspace" -configuration $1 build
+xcodebuild -scheme "Alumni ID" -workspace "Idee App.xcworkspace" -configuration $1 build
 echo "-----------------BUILD ENDED--------------------"
 
 echo "-----------------ARCHIVE STARTED--------------------"
-xcodebuild -UseModernBuildSystem=NO -scheme "Alumni ID" -workspace "Idee App.xcworkspace" -archivePath "./fastlane/app.xcarchive" -configuration $1 PROVISIONING_PROFILE="~/Library/MobileDevice/Provisioning Profiles/$2.mobileprovision" archive
+xcodebuild -scheme "Alumni ID" -workspace "Idee App.xcworkspace" -archivePath "./fastlane/app.xcarchive" -configuration $1 PROVISIONING_PROFILE="~/Library/MobileDevice/Provisioning Profiles/$2.mobileprovision" archive
 echo "-----------------ARCHIVE ENDED--------------------"
 
 echo "-----------------EXPORT STARTED--------------------"
