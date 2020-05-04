@@ -1,15 +1,19 @@
 name: inital setup test
 
 on:
-  push:
-    branches:
-      - test-branch
+  # push:
+  #   branches:
+  #     - master
+
+  repository_dispatch:
 
 jobs:
   build:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v1
+        with:
+          ref: test-branch
       
       - name: Install gpg
         run: brew install gnupg
