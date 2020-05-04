@@ -1,7 +1,7 @@
 name: Build Project
 
 on:
- push:
+  push:
    branches:
      - test-branch
 
