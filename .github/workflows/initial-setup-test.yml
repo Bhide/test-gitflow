@@ -5,7 +5,7 @@ on:
   #   branches:
   #     - master
 
-  repository_dispatch
+  repository_dispatch:
 
 jobs:
   build:
