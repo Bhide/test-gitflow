@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00F4421260B77C8ADBAA3D0F /* Pods_Alumni_ID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E626B551B625DBB0337E8F /* Pods_Alumni_ID.framework */; };
 		376B7F67245FC01E0065E7D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B7F66245FC01E0065E7D7 /* AppDelegate.swift */; };
 		376B7F69245FC01E0065E7D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B7F68245FC01E0065E7D7 /* SceneDelegate.swift */; };
 		376B7F6B245FC01E0065E7D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B7F6A245FC01E0065E7D7 /* ViewController.swift */; };
@@ -19,9 +20,13 @@
 		376B7F81245FC0360065E7D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376B7F71245FC01E0065E7D7 /* LaunchScreen.storyboard */; };
 		376B7F82245FC0360065E7D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376B7F6F245FC01E0065E7D7 /* Assets.xcassets */; };
 		376B7F83245FC0360065E7D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376B7F6C245FC01E0065E7D7 /* Main.storyboard */; };
+		E2E80FC1A61A50E1C0CDAD70 /* Pods_Idee_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3CFD3B19103E5E51369CA2 /* Pods_Idee_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		036EB9FA5C9DC1E6424DA9B7 /* Pods-Alumni ID.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alumni ID.debug.xcconfig"; path = "Target Support Files/Pods-Alumni ID/Pods-Alumni ID.debug.xcconfig"; sourceTree = "<group>"; };
+		208B014D0A4C023BB3465465 /* Pods-Idee App.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Idee App.development.xcconfig"; path = "Target Support Files/Pods-Idee App/Pods-Idee App.development.xcconfig"; sourceTree = "<group>"; };
+		25E1E2EAD67A26B4A7BA7692 /* Pods-Idee App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Idee App.release.xcconfig"; path = "Target Support Files/Pods-Idee App/Pods-Idee App.release.xcconfig"; sourceTree = "<group>"; };
 		376B7F63245FC01E0065E7D7 /* Idee App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Idee App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		376B7F66245FC01E0065E7D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376B7F68245FC01E0065E7D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +38,11 @@
 		376B7F87245FC0360065E7D7 /* Alumni ID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alumni ID.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		376B7F88245FC0360065E7D7 /* Idee App copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Idee App copy-Info.plist"; path = "/Users/samir/Documents/Mobile Projects/Git Actions test/Idee App/Idee App copy-Info.plist"; sourceTree = "<absolute>"; };
 		376B7F8F245FC1DC0065E7D7 /* Alumni IDDevelopment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Alumni IDDevelopment.entitlements"; sourceTree = "<group>"; };
+		94EB9E372E5C585BD9D74417 /* Pods-Idee App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Idee App.debug.xcconfig"; path = "Target Support Files/Pods-Idee App/Pods-Idee App.debug.xcconfig"; sourceTree = "<group>"; };
+		A6BDC5774C9E47BB4D77E2E3 /* Pods-Alumni ID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alumni ID.release.xcconfig"; path = "Target Support Files/Pods-Alumni ID/Pods-Alumni ID.release.xcconfig"; sourceTree = "<group>"; };
+		C7E626B551B625DBB0337E8F /* Pods_Alumni_ID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alumni_ID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC3CFD3B19103E5E51369CA2 /* Pods_Idee_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Idee_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2367C761B378D6B52832B6 /* Pods-Alumni ID.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alumni ID.development.xcconfig"; path = "Target Support Files/Pods-Alumni ID/Pods-Alumni ID.development.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E80FC1A61A50E1C0CDAD70 /* Pods_Idee_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F4421260B77C8ADBAA3D0F /* Pods_Alumni_ID.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +72,8 @@
 				376B7F65245FC01E0065E7D7 /* Idee App */,
 				376B7F64245FC01E0065E7D7 /* Products */,
 				376B7F88245FC0360065E7D7 /* Idee App copy-Info.plist */,
+				993AD64684CC7B46E3994072 /* Pods */,
+				FEA8C3EF9A8555F6FF5AEA23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +100,29 @@
 			path = "Idee App";
 			sourceTree = "<group>";
 		};
+		993AD64684CC7B46E3994072 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				036EB9FA5C9DC1E6424DA9B7 /* Pods-Alumni ID.debug.xcconfig */,
+				DF2367C761B378D6B52832B6 /* Pods-Alumni ID.development.xcconfig */,
+				A6BDC5774C9E47BB4D77E2E3 /* Pods-Alumni ID.release.xcconfig */,
+				94EB9E372E5C585BD9D74417 /* Pods-Idee App.debug.xcconfig */,
+				208B014D0A4C023BB3465465 /* Pods-Idee App.development.xcconfig */,
+				25E1E2EAD67A26B4A7BA7692 /* Pods-Idee App.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FEA8C3EF9A8555F6FF5AEA23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7E626B551B625DBB0337E8F /* Pods_Alumni_ID.framework */,
+				CC3CFD3B19103E5E51369CA2 /* Pods_Idee_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -93,6 +130,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 376B7F77245FC01E0065E7D7 /* Build configuration list for PBXNativeTarget "Idee App" */;
 			buildPhases = (
+				C4EE40A749CED7AC909939C7 /* [CP] Check Pods Manifest.lock */,
 				376B7F5F245FC01E0065E7D7 /* Sources */,
 				376B7F60245FC01E0065E7D7 /* Frameworks */,
 				376B7F61245FC01E0065E7D7 /* Resources */,
@@ -110,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 376B7F84245FC0360065E7D7 /* Build configuration list for PBXNativeTarget "Alumni ID" */;
 			buildPhases = (
+				3A776D33078EF222B3DE1E3E /* [CP] Check Pods Manifest.lock */,
 				376B7F7B245FC0360065E7D7 /* Sources */,
 				376B7F7F245FC0360065E7D7 /* Frameworks */,
 				376B7F80245FC0360065E7D7 /* Resources */,
+				A1E0ECBE30AE8DE993919AD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +219,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A776D33078EF222B3DE1E3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alumni ID-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1E0ECBE30AE8DE993919AD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alumni ID/Pods-Alumni ID-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alumni ID/Pods-Alumni ID-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alumni ID/Pods-Alumni ID-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4EE40A749CED7AC909939C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Idee App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		376B7F5F245FC01E0065E7D7 /* Sources */ = {
@@ -339,6 +443,7 @@
 		};
 		376B7F78245FC01E0065E7D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94EB9E372E5C585BD9D74417 /* Pods-Idee App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -356,6 +461,7 @@
 		};
 		376B7F79245FC01E0065E7D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25E1E2EAD67A26B4A7BA7692 /* Pods-Idee App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -373,6 +479,7 @@
 		};
 		376B7F85245FC0360065E7D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 036EB9FA5C9DC1E6424DA9B7 /* Pods-Alumni ID.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Samir Bhide (28VH3T2NRF)";
@@ -393,6 +500,7 @@
 		};
 		376B7F86245FC0360065E7D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6BDC5774C9E47BB4D77E2E3 /* Pods-Alumni ID.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -470,6 +578,7 @@
 		};
 		376B7F8D245FC0E90065E7D7 /* Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 208B014D0A4C023BB3465465 /* Pods-Idee App.development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -489,6 +598,7 @@
 		};
 		376B7F8E245FC0E90065E7D7 /* Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF2367C761B378D6B52832B6 /* Pods-Alumni ID.development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Alumni IDDevelopment.entitlements";
