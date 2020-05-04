@@ -42,8 +42,7 @@ jobs:
 
       - name: Install pod dependencies
         # if: steps.pods-cache.outputs.cache-hit != 'true'
-        run: |
-          bundle exec pod install
+        run: bundle exec pod install
           
       - name: Setup Firebase CLI
         run: npm install -g firebase-tools
