@@ -10,12 +10,12 @@ on:
 jobs:
   build:
     runs-on: macOS-latest
+    timeout-minutes: 20
+
     steps:
       - uses: actions/checkout@v1
         with:
             ref: test-branch
-            timeout-minutes: 10
-#            submodule: 'true'
       
       - name: Install gpg
         run: brew install gnupg
