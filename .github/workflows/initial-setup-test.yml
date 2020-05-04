@@ -1,9 +1,9 @@
 name: Build Project
 
 on:
-#  push:
-#    branches:
-#      - vertical_app_targets
+ push:
+   branches:
+     - test-branch
 
   repository_dispatch:
 
@@ -60,7 +60,7 @@ jobs:
       #   with:
       #       lane: 'vertical_app_build --env AlumniID-Dev'
 
-      - name: Show contents of Ezport Options
-        run: cat ./exportOptions.plist
+      # - name: Show contents of Ezport Options
+      #   run: cat ./exportOptions.plist
 
 
