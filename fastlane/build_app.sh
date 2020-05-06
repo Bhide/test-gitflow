@@ -6,14 +6,14 @@ echo $1
 echo $2
 echo $3
 
-echo "-----------------BUILD STARTED--------------------"
-xcodebuild -scheme "Alumni ID" -workspace "Idee App.xcworkspace" -configuration $1 build
-echo "-----------------BUILD ENDED--------------------"
+#echo "-----------------BUILD STARTED--------------------"
+#xcodebuild -scheme "Alumni ID" -workspace "Idee App.xcworkspace" -configuration $1 build
+#echo "-----------------BUILD ENDED--------------------"
 
 echo "-----------------ARCHIVE STARTED--------------------"
-xcodebuild -scheme "Alumni ID" -workspace "Idee App.xcworkspace" -archivePath "./fastlane/app.xcarchive" -configuration $1 PROVISIONING_PROFILE="~/Library/MobileDevice/Provisioning Profiles/$2.mobileprovision" archive
+xcodebuild "OTHER_CODE_SIGN_FLAGS=--keychain '~/Library/Keychains/build.keychain'" -scheme "Alumni ID" -workspace "Idee App.xcworkspace" -archivePath "./fastlane/app.xcarchive" -configuration $1 PROVISIONING_PROFILE="~/Library/MobileDevice/Provisioning Profiles/$2.mobileprovision" archive
 echo "-----------------ARCHIVE ENDED--------------------"
 
 echo "-----------------EXPORT STARTED--------------------"
-xcrun xcodebuild -exportArchive -exportOptionsPlist "./exportOptions.plist" -archivePath "./fastlane/app.xcarchive" -exportPath "./fastlane/IPA"
+xcrun xcodebuild "OTHER_CODE_SIGN_FLAGS=--keychain '~/Library/Keychains/build.keychain'" -exportArchive -exportOptionsPlist "./exportOptions.plist" -archivePath "./fastlane/app.xcarchive" -exportPath "./fastlane/IPA"
 echo "-----------------EXPORT ENDED--------------------"

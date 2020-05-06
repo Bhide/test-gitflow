@@ -9,3 +9,6 @@
 /usr/libexec/PlistBuddy -c "Add :signingStyle string "manual"" ./exportOptions.plist
 /usr/libexec/PlistBuddy -c "Add :provisioningProfiles:$3 string $4" ./exportOptions.plist
 /usr/libexec/PlistBuddy -c "Add :provisioningProfiles:$5 string $6" ./exportOptions.plist
+
+echo "--------------Printing content of exportOptions.plist-------------"
+cat ./exportOptions.plist

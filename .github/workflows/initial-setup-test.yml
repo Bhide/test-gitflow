@@ -16,9 +16,6 @@ jobs:
       - uses: actions/checkout@v1
         with:
             ref: test-branch
-      
-      - name: Install gpg
-        run: brew install gnupg
         
       - name: Switch XCode Version
         run: sudo xcode-select -s /Applications/Xcode_11.2.1.app
@@ -52,16 +49,10 @@ jobs:
 
       - name: Install Fastlane Plugin Versioning
         run: fastlane add_plugin versioning
-
-      # # - name: Unset CFProcessPath & run fastlane
-      # #   run: unset CFProcessPath; bundle exec fastlane vertical_app_build --env AlumniID-Dev
           
       - name: Fastlane Action
         uses: maierj/fastlane-action@v1.4.0
         with:
             lane: 'vertical_app_build --env AlumniID-Dev'
-
-      - name: Show contents of Ezport Options
-        run: cat ./exportOptions.plist
 
 
