@@ -10,16 +10,14 @@ cp ./.github/secrets/profile.mobileprovision ~/Library/MobileDevice/Provisioning
 
 echo "CREATE NEW KEYCHAIN AND COPY CERTIFICATE TO IT. UNLOCK THE KEYCHAIN TO MAKE IT ACCESSIBLE"
 
-# security create-keychain -p "" build.keychain
-security import ./.github/secrets/Certificates.p12 -t agg -k ~/Library/Keychains/tempkeyset.keychain -P "" -A
+security create-keychain -p "" build.keychain
+security import ./.github/secrets/Certificates.p12 -t agg -k ~/Library/Keychains/build.keychain -P "" -A -T /usr/bin/codesign
 
-# security list-keychains -s ~/Library/Keychains/tempkeyset.keychain
-# security default-keychain -s ~/Library/Keychains/tempkeyset.keychain
-# security unlock-keychain -p "" ~/Library/Keychains/tempkeyset.keychain
+security list-keychains -s ~/Library/Keychains/build.keychain
+# security default-keychain -s ~/Library/Keychains/build.keychain
+security unlock-keychain -p "" ~/Library/Keychains/build.keychain
 
-# security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "" ~/Library/Keychains/tempkeyset.keychain
-
+security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychains/build.keychain
 
 echo "------------LISTING CONTENTS OF KEYCHAIN FOLDER-------------"
 ls ~/Library/Keychains
-security find-certificate ~/Library/Keychains/tempkeyset.keychain
