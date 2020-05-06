@@ -7,7 +7,7 @@ target 'Idee App' do
 end
 
 target 'Alumni ID' do
-  pod 'Kingfisher', '~> 5.0'
+  # pod 'Kingfisher', '~> 5.0'
 end
 
 
