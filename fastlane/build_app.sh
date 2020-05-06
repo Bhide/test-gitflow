@@ -11,9 +11,9 @@ echo $3
 #echo "-----------------BUILD ENDED--------------------"
 
 echo "-----------------ARCHIVE STARTED--------------------"
-xcodebuild "OTHER_CODE_SIGN_FLAGS=--keychain '~/Library/Keychains/build.keychain'" -scheme "Alumni ID" -workspace "Idee App.xcworkspace" -archivePath "./fastlane/app.xcarchive" -configuration $1 PROVISIONING_PROFILE="~/Library/MobileDevice/Provisioning Profiles/$2.mobileprovision" archive
+xcodebuild "OTHER_CODE_SIGN_FLAGS=--keychain '~/Library/Keychains/tempkeyset.keychain'" -scheme "Alumni ID" -workspace "Idee App.xcworkspace" -archivePath "./fastlane/app.xcarchive" -configuration $1 PROVISIONING_PROFILE="~/Library/MobileDevice/Provisioning Profiles/$2.mobileprovision" archive
 echo "-----------------ARCHIVE ENDED--------------------"
 
 echo "-----------------EXPORT STARTED--------------------"
-xcrun xcodebuild "OTHER_CODE_SIGN_FLAGS=--keychain '~/Library/Keychains/build.keychain'" -exportArchive -exportOptionsPlist "./exportOptions.plist" -archivePath "./fastlane/app.xcarchive" -exportPath "./fastlane/IPA"
+xcrun xcodebuild "OTHER_CODE_SIGN_FLAGS=--keychain '~/Library/Keychains/tempkeyset.keychain'" -exportArchive -exportOptionsPlist "./exportOptions.plist" -archivePath "./fastlane/app.xcarchive" -exportPath "./fastlane/IPA"
 echo "-----------------EXPORT ENDED--------------------"
