@@ -113,6 +113,19 @@ lane :exec_test do
 	verify_xcode(xcode_path: "/Applications/Xcode.app")
 end
 
+lane :createkeychain do
+  # Create a temporary keychain to
+    # store the certificates.
+    create_keychain(
+      name: "tempkeyset",
+      password: "",
+      default_keychain: false,
+      unlock: true,
+      timeout: 3600,
+      add_to_search_list: true
+    )
+end
+
   # upload to Beta by Crashlytics
   #crashlytics(
     # api_token: "YOUR_API_KEY",

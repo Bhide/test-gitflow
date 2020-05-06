@@ -20,14 +20,6 @@ jobs:
       - name: Switch XCode Version
         run: sudo xcode-select -s /Applications/Xcode_11.4.1.app
         
-      - name: Set Permissions for decrypt_secrets.sh file
-        run: chmod +x .github/secrets/decrypt_secrets.sh
-        
-      - name: Setup provisioning profile
-        run: ./.github/secrets/decrypt_secrets.sh
-        env:
-          IOS_PROFILE_KEY: ${{ secrets.IOS_PROFILE_KEY }}
-
       - name: Cache Pods dependencies
         uses: actions/cache@v1
         id: pods-cache
@@ -49,10 +41,22 @@ jobs:
 
       - name: Install Fastlane Plugin Versioning
         run: fastlane add_plugin versioning
+        
+      - name: Fastlane Action Create temp keychain
+        run: fastlane createkeychain
+        
+      - name: Set Permissions for decrypt_secrets.sh file
+        run: chmod +x .github/secrets/decrypt_secrets.sh
           
+      - name: Setup provisioning profile
+        run: ./.github/secrets/decrypt_secrets.sh
+        env:
+            IOS_PROFILE_KEY: ${{ secrets.IOS_PROFILE_KEY }}
+        
       - name: Fastlane Action
         uses: maierj/fastlane-action@v1.4.0
         with:
             lane: 'vertical_app_build --env AlumniID-Dev'
+
 
 
