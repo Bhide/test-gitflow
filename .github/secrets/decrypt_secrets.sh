@@ -22,3 +22,4 @@ security import ./.github/secrets/Certificates.p12 -t agg -k ~/Library/Keychains
 
 echo "------------LISTING CONTENTS OF KEYCHAIN FOLDER-------------"
 ls ~/Library/Keychains
+security find-certificate ~/Library/Keychains/tempkeyset.keychain
