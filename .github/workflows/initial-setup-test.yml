@@ -35,7 +35,9 @@ jobs:
         run: pod install
 
       - name: List Pods 
-        run: ls ./Pods
+        run: |
+          ls ./Pods
+          ls .
           
       # - name: Setup Firebase CLI
       #   run: npm install -g firebase-tools
