@@ -131,6 +131,13 @@ lane :vertical_app_build do
   
 end
 
+land :installpods do
+  cocoapods(
+      clean_install: false
+
+    )
+end
+
 lane :exec_test do
 	verify_xcode(xcode_path: "/Applications/Xcode.app")
 end
