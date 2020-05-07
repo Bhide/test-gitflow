@@ -43,8 +43,8 @@ jobs:
       - name: Install Fastlane Plugin Versioning
         run: fastlane add_plugin versioning
         
-      - name: Fastlane Action Create temp keychain
-        run: fastlane createkeychain
+      # - name: Fastlane Action Create temp keychain
+      #   run: fastlane createkeychain
 
       - name: Cocoapods install Fastlane
         run: fastlane installpods
