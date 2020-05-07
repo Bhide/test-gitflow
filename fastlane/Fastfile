@@ -131,7 +131,7 @@ lane :vertical_app_build do
   
 end
 
-land :installpods do
+lane :installpods do
   cocoapods(
       clean_install: false
 
