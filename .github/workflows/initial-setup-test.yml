@@ -33,17 +33,17 @@ jobs:
         if: steps.pods-cache.outputs.cache-hit != 'true'
         run: pod install
           
-      # - name: Setup Firebase CLI
-      #   run: npm install -g firebase-tools
+      - name: Setup Firebase CLI
+        run: npm install -g firebase-tools
 
-      # - name: Install Fastlane Plugin App Distribution
-      #   run: fastlane add_plugin firebase_app_distribution
+      - name: Install Fastlane Plugin App Distribution
+        run: fastlane add_plugin firebase_app_distribution
 
-      # - name: Install Fastlane Plugin Versioning
-      #   run: fastlane add_plugin versioning
+      - name: Install Fastlane Plugin Versioning
+        run: fastlane add_plugin versioning
         
-      # - name: Fastlane Action Create temp keychain
-      #   run: fastlane createkeychain
+      - name: Fastlane Action Create temp keychain
+        run: fastlane createkeychain
         
       - name: Set Permissions for decrypt_secrets.sh file
         run: chmod +x .github/secrets/decrypt_secrets.sh
@@ -53,10 +53,10 @@ jobs:
         env:
             TEST_REPO_SECRET: ${{ secrets.TEST_REPO_SECRET }}
         
-      # - name: Fastlane Action
-      #   uses: maierj/fastlane-action@v1.4.0
-      #   with:
-      #       lane: 'vertical_app_build --env AlumniID-Dev'
+      - name: Fastlane Action
+        uses: maierj/fastlane-action@v1.4.0
+        with:
+            lane: 'vertical_app_build --env AlumniID-Dev'
 
 
 
