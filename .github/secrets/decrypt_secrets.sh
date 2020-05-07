@@ -23,3 +23,4 @@ security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychai
 
 echo "------------LISTING CONTENTS OF KEYCHAIN FOLDER-------------"
 ls ~/Library/Keychains
+ls -p ~/Library/MobileDevice/Provisioning\ Profiles
