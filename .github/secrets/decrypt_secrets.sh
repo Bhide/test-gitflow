@@ -18,8 +18,12 @@ security import ./.github/secrets/Certificates.p12 -t agg -k ~/Library/Keychains
 security list-keychains -s ~/Library/Keychains/build.keychain
 # security default-keychain -s ~/Library/Keychains/build.keychain
 security unlock-keychain -p "" ~/Library/Keychains/build.keychain
+security set-keychain-settings -lut 900
 
 security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychains/build.keychain
+
+sudo security add-trusted-cert -d -r trustRoot -k "~/Library/Keychains/build.keychain" “./.github/secrets/Certificates.p12”
+
 
 echo "------------LISTING CONTENTS OF KEYCHAIN FOLDER-------------"
 ls ~/Library/Keychains
