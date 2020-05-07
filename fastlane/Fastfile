@@ -72,43 +72,6 @@ lane :vertical_app_build do
   sh "cd ..; pwd; fastlane/build_app.sh #{ENV['CONFIGURATION']} #{ENV['PROVISIONING_PROFILE']} #{ENV['TARGET']}"
 
 
-
-  # build_app(
-  #   workspace: "Idee App.xcworkspace",
-  #   configuration: ENV['CONFIGURATION'],
-  #   scheme: ENV['TARGET'],
-  #   silent: true,
-  #   clean: true,
-  #   output_directory: "./build", # Destination directory. Defaults to current directory.
-  #   output_name: ENV['IPA_FILE_NAME'],       # specify the name of the .ipa file to generate (including file extension)
-  #   export_options: "./exportOptions.plist"
-  # )
-
-
-
-
-
-  # export_options("./exportOptions.plist")
-
-
-  # build_app(
-  #       workspace: "Idee App.xcworkspace",
-  #       scheme: ENV['TARGET'],
-  #       export_options: {
-  #               method: "ad-hoc",
-  #               provisioningProfiles: { 
-  #                       "io.id123.alumniid.dev" => "Alumni ID Development",
-  #                       "io.id123.alumniid.dev.idcards" => "Alumni ID Cards Widget Development"
-  #   },
-  #       signingCertificate: "8791A672216195B2607D0108228554C479A1C805",
-  #       signingStyle: "manual",
-  #       teamID: "6SPCVN67S3",
-  #       thinning: "<none>",
-  #       stripSwiftSymbols: true,
-
-  # }
-
-
   # )
 
 #   firebase_app_distribution(
