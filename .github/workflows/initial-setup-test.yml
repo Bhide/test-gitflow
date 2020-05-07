@@ -33,6 +33,8 @@ jobs:
       - name: Pod install 
         if: steps.pods-cache.outputs.cache-hit != 'true'
         run: pod install
+        else:
+          run: git rm -rf ./Podfile.lock
 
       - name: List Pods 
         run: |
