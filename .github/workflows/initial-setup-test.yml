@@ -53,10 +53,10 @@ jobs:
         env:
             TEST_REPO_SECRET: ${{ secrets.TEST_REPO_SECRET }}
         
-      - name: Fastlane Action
-        uses: maierj/fastlane-action@v1.4.0
-        with:
-            lane: 'vertical_app_build --env AlumniID-Dev'
+      # - name: Fastlane Action
+      #   uses: maierj/fastlane-action@v1.4.0
+      #   with:
+      #       lane: 'vertical_app_build --env AlumniID-Dev'
 
 
 
