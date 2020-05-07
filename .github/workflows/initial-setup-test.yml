@@ -30,7 +30,7 @@ jobs:
             ${{ runner.os }}-pods-
 
       - name: Install pod dependencies
-        if: steps.pods-cache.outputs.cache-hit != 'true'
+        # if: steps.pods-cache.outputs.cache-hit != 'true'
         run: pod install
           
       - name: Setup Firebase CLI

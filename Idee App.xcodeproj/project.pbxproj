@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,8 +20,36 @@
 		376B7F81245FC0360065E7D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376B7F71245FC01E0065E7D7 /* LaunchScreen.storyboard */; };
 		376B7F82245FC0360065E7D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376B7F6F245FC01E0065E7D7 /* Assets.xcassets */; };
 		376B7F83245FC0360065E7D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376B7F6C245FC01E0065E7D7 /* Main.storyboard */; };
+		376D4F262463B1FC00E51FED /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376D4F252463B1FC00E51FED /* NotificationCenter.framework */; };
+		376D4F292463B1FC00E51FED /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376D4F282463B1FC00E51FED /* TodayViewController.swift */; };
+		376D4F2C2463B1FC00E51FED /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376D4F2A2463B1FC00E51FED /* MainInterface.storyboard */; };
+		376D4F302463B1FC00E51FED /* Alumni ID Cards.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 376D4F242463B1FC00E51FED /* Alumni ID Cards.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E2E80FC1A61A50E1C0CDAD70 /* Pods_Idee_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3CFD3B19103E5E51369CA2 /* Pods_Idee_App.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		376D4F2E2463B1FC00E51FED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 376B7F5B245FC01E0065E7D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 376D4F232463B1FC00E51FED;
+			remoteInfo = "Alumni ID Cards";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		376D4F312463B1FC00E51FED /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				376D4F302463B1FC00E51FED /* Alumni ID Cards.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		036EB9FA5C9DC1E6424DA9B7 /* Pods-Alumni ID.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alumni ID.debug.xcconfig"; path = "Target Support Files/Pods-Alumni ID/Pods-Alumni ID.debug.xcconfig"; sourceTree = "<group>"; };
@@ -38,6 +66,14 @@
 		376B7F87245FC0360065E7D7 /* Alumni ID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alumni ID.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		376B7F88245FC0360065E7D7 /* Idee App copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Idee App copy-Info.plist"; path = "/Users/samir/Documents/Mobile Projects/Git Actions test/Idee App/Idee App copy-Info.plist"; sourceTree = "<absolute>"; };
 		376B7F8F245FC1DC0065E7D7 /* Alumni IDDevelopment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Alumni IDDevelopment.entitlements"; sourceTree = "<group>"; };
+		376D4F242463B1FC00E51FED /* Alumni ID Cards.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Alumni ID Cards.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		376D4F252463B1FC00E51FED /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		376D4F282463B1FC00E51FED /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		376D4F2B2463B1FC00E51FED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		376D4F2D2463B1FC00E51FED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376D4F362463B4D200E51FED /* Alumni IDDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Alumni IDDebug.entitlements"; sourceTree = "<group>"; };
+		376D4F372463B4DE00E51FED /* Alumni ID CardsDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Alumni ID CardsDebug.entitlements"; sourceTree = "<group>"; };
+		376D4F382463B4F400E51FED /* Alumni ID CardsDevelopment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Alumni ID CardsDevelopment.entitlements"; sourceTree = "<group>"; };
 		94EB9E372E5C585BD9D74417 /* Pods-Idee App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Idee App.debug.xcconfig"; path = "Target Support Files/Pods-Idee App/Pods-Idee App.debug.xcconfig"; sourceTree = "<group>"; };
 		A6BDC5774C9E47BB4D77E2E3 /* Pods-Alumni ID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alumni ID.release.xcconfig"; path = "Target Support Files/Pods-Alumni ID/Pods-Alumni ID.release.xcconfig"; sourceTree = "<group>"; };
 		C7E626B551B625DBB0337E8F /* Pods_Alumni_ID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alumni_ID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,14 +98,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		376D4F212463B1FC00E51FED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376D4F262463B1FC00E51FED /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		376B7F5A245FC01E0065E7D7 = {
 			isa = PBXGroup;
 			children = (
+				376D4F362463B4D200E51FED /* Alumni IDDebug.entitlements */,
 				376B7F8F245FC1DC0065E7D7 /* Alumni IDDevelopment.entitlements */,
 				376B7F65245FC01E0065E7D7 /* Idee App */,
+				376D4F272463B1FC00E51FED /* Alumni ID Cards */,
 				376B7F64245FC01E0065E7D7 /* Products */,
 				376B7F88245FC0360065E7D7 /* Idee App copy-Info.plist */,
 				993AD64684CC7B46E3994072 /* Pods */,
@@ -82,6 +128,7 @@
 			children = (
 				376B7F63245FC01E0065E7D7 /* Idee App.app */,
 				376B7F87245FC0360065E7D7 /* Alumni ID.app */,
+				376D4F242463B1FC00E51FED /* Alumni ID Cards.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +147,18 @@
 			path = "Idee App";
 			sourceTree = "<group>";
 		};
+		376D4F272463B1FC00E51FED /* Alumni ID Cards */ = {
+			isa = PBXGroup;
+			children = (
+				376D4F382463B4F400E51FED /* Alumni ID CardsDevelopment.entitlements */,
+				376D4F372463B4DE00E51FED /* Alumni ID CardsDebug.entitlements */,
+				376D4F282463B1FC00E51FED /* TodayViewController.swift */,
+				376D4F2A2463B1FC00E51FED /* MainInterface.storyboard */,
+				376D4F2D2463B1FC00E51FED /* Info.plist */,
+			);
+			path = "Alumni ID Cards";
+			sourceTree = "<group>";
+		};
 		993AD64684CC7B46E3994072 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +169,6 @@
 				208B014D0A4C023BB3465465 /* Pods-Idee App.development.xcconfig */,
 				25E1E2EAD67A26B4A7BA7692 /* Pods-Idee App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -119,6 +177,7 @@
 			children = (
 				C7E626B551B625DBB0337E8F /* Pods_Alumni_ID.framework */,
 				CC3CFD3B19103E5E51369CA2 /* Pods_Idee_App.framework */,
+				376D4F252463B1FC00E51FED /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,15 +212,34 @@
 				376B7F7F245FC0360065E7D7 /* Frameworks */,
 				376B7F80245FC0360065E7D7 /* Resources */,
 				A1E0ECBE30AE8DE993919AD9 /* [CP] Embed Pods Frameworks */,
+				376D4F312463B1FC00E51FED /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				376D4F2F2463B1FC00E51FED /* PBXTargetDependency */,
 			);
 			name = "Alumni ID";
 			productName = "Idee App";
 			productReference = 376B7F87245FC0360065E7D7 /* Alumni ID.app */;
 			productType = "com.apple.product-type.application";
+		};
+		376D4F232463B1FC00E51FED /* Alumni ID Cards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376D4F352463B1FC00E51FED /* Build configuration list for PBXNativeTarget "Alumni ID Cards" */;
+			buildPhases = (
+				376D4F202463B1FC00E51FED /* Sources */,
+				376D4F212463B1FC00E51FED /* Frameworks */,
+				376D4F222463B1FC00E51FED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alumni ID Cards";
+			productName = "Alumni ID Cards";
+			productReference = 376D4F242463B1FC00E51FED /* Alumni ID Cards.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -174,6 +252,9 @@
 				ORGANIZATIONNAME = ID123;
 				TargetAttributes = {
 					376B7F62245FC01E0065E7D7 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					376D4F232463B1FC00E51FED = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
@@ -193,6 +274,7 @@
 			targets = (
 				376B7F62245FC01E0065E7D7 /* Idee App */,
 				376B7F7A245FC0360065E7D7 /* Alumni ID */,
+				376D4F232463B1FC00E51FED /* Alumni ID Cards */,
 			);
 		};
 /* End PBXProject section */
@@ -215,6 +297,14 @@
 				376B7F81245FC0360065E7D7 /* LaunchScreen.storyboard in Resources */,
 				376B7F82245FC0360065E7D7 /* Assets.xcassets in Resources */,
 				376B7F83245FC0360065E7D7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376D4F222463B1FC00E51FED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376D4F2C2463B1FC00E51FED /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +395,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		376D4F202463B1FC00E51FED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376D4F292463B1FC00E51FED /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		376D4F2F2463B1FC00E51FED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 376D4F232463B1FC00E51FED /* Alumni ID Cards */;
+			targetProxy = 376D4F2E2463B1FC00E51FED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		376B7F6C245FC01E0065E7D7 /* Main.storyboard */ = {
@@ -322,6 +428,14 @@
 				376B7F72245FC01E0065E7D7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		376D4F2A2463B1FC00E51FED /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				376D4F2B2463B1FC00E51FED /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -481,7 +595,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 036EB9FA5C9DC1E6424DA9B7 /* Pods-Alumni ID.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Alumni IDDebug.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Samir Bhide (28VH3T2NRF)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6SPCVN67S3;
@@ -502,6 +618,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A6BDC5774C9E47BB4D77E2E3 /* Pods-Alumni ID.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				INFOPLIST_FILE = "Idee App copy-Info.plist";
@@ -600,6 +717,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF2367C761B378D6B52832B6 /* Pods-Alumni ID.development.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Alumni IDDevelopment.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ID123 Inc. (6SPCVN67S3)";
@@ -617,6 +735,68 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Development;
+		};
+		376D4F322463B1FC00E51FED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Alumni ID Cards/Alumni ID CardsDebug.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Samir Bhide (28VH3T2NRF)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6SPCVN67S3;
+				INFOPLIST_FILE = "Alumni ID Cards/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.id123.alumniid.dev.idcards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Alumni ID Card Widget Debug";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		376D4F332463B1FC00E51FED /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Alumni ID Cards/Alumni ID CardsDevelopment.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ID123 Inc. (6SPCVN67S3)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6SPCVN67S3;
+				INFOPLIST_FILE = "Alumni ID Cards/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.id123.alumniid.dev.idcards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Alumni ID Cards Widget Development";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Development;
+		};
+		376D4F342463B1FC00E51FED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Alumni ID Cards/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.id123.alumniid.Alumni-ID-Cards";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -647,6 +827,16 @@
 				376B7F85245FC0360065E7D7 /* Debug */,
 				376B7F8E245FC0E90065E7D7 /* Development */,
 				376B7F86245FC0360065E7D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376D4F352463B1FC00E51FED /* Build configuration list for PBXNativeTarget "Alumni ID Cards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376D4F322463B1FC00E51FED /* Debug */,
+				376D4F332463B1FC00E51FED /* Development */,
+				376D4F342463B1FC00E51FED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
