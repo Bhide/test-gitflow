@@ -1,9 +1,9 @@
 #!/bin/sh
 
-gpg --quiet --batch --yes --decrypt --passphrase="$IOS_PROFILE_KEY" --output ./.github/secrets/profile.mobileprovision ./.github/secrets/83d1fbcd-7c19-4612-b1a2-329963ba4273.mobileprovision.gpg
-gpg --quiet --batch --yes --decrypt --passphrase="$IOS_PROFILE_KEY" --output ./.github/secrets/Certificates.p12 ./.github/secrets/iPhone\ Distribution.p12.gpg
+gpg --quiet --batch --yes --decrypt --passphrase="$TEST_REPO_SECRET" --output ./.github/secrets/profile.mobileprovision ./.github/secrets/83d1fbcd-7c19-4612-b1a2-329963ba4273.mobileprovision.gpg
+gpg --quiet --batch --yes --decrypt --passphrase="$TEST_REPO_SECRET" --output ./.github/secrets/Certificates.p12 ./.github/secrets/iPhone\ Distribution.p12.gpg
 
-gpg --quiet --batch --yes --decrypt --passphrase="$IOS_PROFILE_KEY" --output ./.github/secrets/profile_id_card_widget.mobileprovision ./.github/secrets/034a0e6f-37db-42c8-9f60-fe2c92b7af2a.mobileprovision.gpg
+gpg --quiet --batch --yes --decrypt --passphrase="$TEST_REPO_SECRET" --output ./.github/secrets/profile_id_card_widget.mobileprovision ./.github/secrets/034a0e6f-37db-42c8-9f60-fe2c92b7af2a.mobileprovision.gpg
 
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 

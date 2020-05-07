@@ -51,7 +51,7 @@ jobs:
       - name: Setup provisioning profile
         run: ./.github/secrets/decrypt_secrets.sh
         env:
-            IOS_PROFILE_KEY: ${{ secrets.IOS_PROFILE_KEY }}
+            IOS_PROFILE_KEY: ${{ secrets.TEST_REPO_SECRET }}
         
       - name: Fastlane Action
         uses: maierj/fastlane-action@v1.4.0
