@@ -31,7 +31,7 @@ jobs:
             ${{ runner.os }}-pods-
 
       - name: Pod install 
-        # if: steps.pods-cache.outputs.cache-hit != 'true'
+        if: steps.pods-cache.outputs.cache-hit != 'true'
         run: |
             pod install
             cp ./Podfile.lock ./Pods/Manifest.lock
