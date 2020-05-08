@@ -39,6 +39,14 @@ jobs:
           ls ./Pods
           ls .
 
+      - name: Check diff Podfile.lock and Manifest.lock
+          run: |
+            diff "./Podfile.lock" "./Pods/Manifest.lock" > /dev/null
+            echo "Difference found in Podfile and Manifest file?"
+            echo $?
+            cat ./Podfile.lock
+            cat ./Pods/Manifest.lock
+
       - name: Delete  Podfile.lock and Manifest.lock
         if: steps.pods-cache.outputs.cache-hit == 'true'
         run: |
