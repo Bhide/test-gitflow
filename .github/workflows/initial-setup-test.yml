@@ -31,7 +31,7 @@ jobs:
             ${{ runner.os }}-pods-
 
       - name: Pod install 
-        # if: steps.pods-cache.outputs.cache-hit != 'true'
+        if: steps.pods-cache.outputs.cache-hit != 'true'
         run: |
             pod install
             cat ./Podfile.lock ./Pods/Manifest.lock
@@ -56,12 +56,6 @@ jobs:
 
       - name: Install Fastlane Plugin Versioning
         run: fastlane add_plugin versioning
-        
-      # - name: Fastlane Action Create temp keychain
-      #   run: fastlane createkeychain
-
-      # - name: Cocoapods install Fastlane
-      #   run: fastlane installpods
         
       - name: Set Permissions for decrypt_secrets.sh file
         run: chmod +x .github/secrets/decrypt_secrets.sh
