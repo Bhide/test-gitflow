@@ -43,7 +43,7 @@ jobs:
         if: steps.pods-cache.outputs.cache-hit == 'true'
         run: |
           git rm -rf ./Podfile.lock
-          git cd ./Pods
+          cd ./Pods
           git rm -rf Manifest.lock
           
       - name: Setup Firebase CLI
