@@ -43,7 +43,8 @@ jobs:
         if: steps.pods-cache.outputs.cache-hit == 'true'
         run: |
           git rm -rf ./Podfile.lock
-          git rm -rf ./Pods/Manifest.lock
+          git cd ./Pods
+          git rm -rf Manifest.lock
           
       - name: Setup Firebase CLI
         run: npm install -g firebase-tools
