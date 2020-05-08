@@ -34,7 +34,7 @@ jobs:
         if: steps.pods-cache.outputs.cache-hit != 'true'
         run: |
             pod install
-            cat ./Podfile.lock ./Pods/Manifest.lock
+            cp ./Podfile.lock ./Pods/Manifest.lock
 
       - name: List Pods 
         run: |
