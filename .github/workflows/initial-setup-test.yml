@@ -31,8 +31,10 @@ jobs:
             ${{ runner.os }}-pods-
 
       - name: Pod install 
-        if: steps.pods-cache.outputs.cache-hit != 'true'
-        run: pod install
+        # if: steps.pods-cache.outputs.cache-hit != 'true'
+        run: |
+            pod install
+            cat ./Podfile.lock ./Pods/Manifest.lock
 
       - name: List Pods 
         run: |
@@ -45,7 +47,7 @@ jobs:
             echo "Difference found in Podfile and Manifest file?"
             cat ./Podfile.lock
             cat ./Pods/Manifest.lock
-          
+
       - name: Setup Firebase CLI
         run: npm install -g firebase-tools
 
