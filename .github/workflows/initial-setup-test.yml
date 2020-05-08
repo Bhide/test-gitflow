@@ -42,9 +42,10 @@ jobs:
       - name: Delete  Podfile.lock and Manifest.lock
         if: steps.pods-cache.outputs.cache-hit == 'true'
         run: |
-          git rm -rf ./Podfile.lock
-          cd ./Pods
-          git rm -rf Manifest.lock
+          cat ./Podfile.lock ./Pods/Manifest.lock
+          # rm -rf ./Podfile.lock
+          # cd ./Pods
+          # rm -rf Manifest.lock
           
       - name: Setup Firebase CLI
         run: npm install -g firebase-tools
