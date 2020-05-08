@@ -34,9 +34,11 @@ jobs:
         if: steps.pods-cache.outputs.cache-hit != 'true'
         run: pod install
 
-      - name: Delete  Podfile.lock 
+      - name: Delete  Podfile.lock and Manifest.lock
         if: steps.pods-cache.outputs.cache-hit == 'true'
-        run: git rm -rf ./Podfile.lock
+        run: |
+          git rm -rf ./Podfile.lock
+          git rm -rf ./Pods/Manifest.lock
 
       - name: List Pods 
         run: |
