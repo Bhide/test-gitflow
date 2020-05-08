@@ -45,7 +45,6 @@ jobs:
             echo "Difference found in Podfile and Manifest file?"
             cat ./Podfile.lock
             cat ./Pods/Manifest.lock
-            pod --version
           
       - name: Setup Firebase CLI
         run: npm install -g firebase-tools
