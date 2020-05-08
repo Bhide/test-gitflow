@@ -41,8 +41,7 @@ jobs:
 
       - name: Check diff Podfile.lock and Manifest.lock
         run: |
-            diff ./Podfile.lock ./Pods/Manifest.lock > /dev/null
-            echo $?
+            diff ./Podfile.lock ./Pods/Manifest.lock > /dev/null; echo $?
             echo "Difference found in Podfile and Manifest file?"
             cat ./Podfile.lock
             cat ./Pods/Manifest.lock
