@@ -40,7 +40,7 @@ jobs:
           ls .
 
       - name: Check diff Podfile.lock and Manifest.lock
-          run: |
+        run: |
             diff "./Podfile.lock" "./Pods/Manifest.lock" > /dev/null
             echo "Difference found in Podfile and Manifest file?"
             echo $?
