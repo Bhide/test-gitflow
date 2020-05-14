@@ -1,6 +1,10 @@
 name: Build Project
 
 on:
+  gollum:
+   branches:
+    - master
+
   push:
    branches:
      - test-branch
