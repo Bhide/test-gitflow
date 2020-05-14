@@ -38,53 +38,38 @@ lane :vertical_app_build do
 # BUNDLE_ID_WIDGET=io.id123.alumniid.dev.idcards
 # PROVISIONING_PROFILE=83d1fbcd-7c19-4612-b1a2-329963ba4273
 # PROVISIONING_PROFILE_WIDGET=034a0e6f-37db-42c8-9f60-fe2c92b7af2a
-# CERTIFICATE=iPhone Distribution
+# CERTIFICATE=iPhone firebase_app_distribution
 # TEAM_ID=6SPCVN67S3
 # IPA_FILE_NAME=Alumni ID-Dev.ipa
 
 # ./exportoptions.sh "6SPCVN67S3" "iPhone Distribution: ID123 Inc. (6SPCVN67S3)" "io.id123.alumniid.dev" "Alumni ID Development" "io.id123.alumniid.dev.idcards" "Alumni ID Cards Widget Development"
+# CONFIGURATION=Development
+# TARGET=Alumni ID
+# TARGET_WIDGET=Alumni ID Cards
+# BUNDLE_ID=io.id123.alumniid.dev
+# BUNDLE_ID_WIDGET=io.id123.alumniid.dev.idcards
+# PROVISIONING_PROFILE=83d1fbcd-7c19-4612-b1a2-329963ba4273
+# PROVISIONING_PROFILE_WIDGET=034a0e6f-37db-42c8-9f60-fe2c92b7af2a
+# CERTIFICATE=8791A672216195B2607D0108228554C479A1C805
+# TEAM_ID=6SPCVN67S3
+# IPA_FILE_NAME=Alumni ID-Dev.ipa
 
+# echo "TEAM ID:"
+# echo $1
+# echo "CERTIFICATE:"
+# echo $2
+# echo "APP BUNDLE ID:"
+# echo $3
+# echo "PROVISIONING APP:"
+# echo $4
+# echo "WIDGET BUNDLE ID:"
+# echo $5
+# echo "PROVISIONING WIDGET:"
+# echo $6
 
   sh "cd ..; pwd; fastlane/exportoptions.sh #{ENV['TEAM_ID']} #{ENV['CERTIFICATE']} #{ENV['BUNDLE_ID']} #{ENV['PROVISIONING_PROFILE']} #{ENV['BUNDLE_ID_WIDGET']} #{ENV['PROVISIONING_PROFILE_WIDGET']}"
 
   sh "cd ..; pwd; fastlane/build_app.sh #{ENV['CONFIGURATION']} #{ENV['PROVISIONING_PROFILE']} #{ENV['TARGET']}"
-
-
-
-  # build_app(
-  #   workspace: "Idee App.xcworkspace",
-  #   configuration: ENV['CONFIGURATION'],
-  #   scheme: ENV['TARGET'],
-  #   silent: true,
-  #   clean: true,
-  #   output_directory: "./build", # Destination directory. Defaults to current directory.
-  #   output_name: ENV['IPA_FILE_NAME'],       # specify the name of the .ipa file to generate (including file extension)
-  #   export_options: "./exportOptions.plist"
-  # )
-
-
-
-
-
-  # export_options("./exportOptions.plist")
-
-
-  # build_app(
-  #       workspace: "Idee App.xcworkspace",
-  #       scheme: ENV['TARGET'],
-  #       export_options: {
-  #               method: "ad-hoc",
-  #               provisioningProfiles: { 
-  #                       "io.id123.alumniid.dev" => "Alumni ID Development",
-  #                       "io.id123.alumniid.dev.idcards" => "Alumni ID Cards Widget Development"
-  #   },
-  #       signingCertificate: "8791A672216195B2607D0108228554C479A1C805",
-  #       signingStyle: "manual",
-  #       teamID: "6SPCVN67S3",
-  #       thinning: "<none>",
-  #       stripSwiftSymbols: true,
-
-  # }
 
 
   # )
@@ -109,8 +94,28 @@ lane :vertical_app_build do
   
 end
 
+lane :installpods do
+  cocoapods(
+      clean_install: false
+
+    )
+end
+
 lane :exec_test do
 	verify_xcode(xcode_path: "/Applications/Xcode.app")
+end
+
+lane :createkeychain do
+  # Create a temporary keychain to
+    # store the certificates.
+    create_keychain(
+      name: "tempkeyset",
+      password: "",
+      default_keychain: false,
+      unlock: true,
+      timeout: 3600,
+      add_to_search_list: true
+    )
 end
 
   # upload to Beta by Crashlytics
