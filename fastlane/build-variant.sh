@@ -75,6 +75,6 @@ case "$TARGET" in
 #case 4
     "Member-ID-Dev") echo "MemberID-Dev" ;; 
 
-    *) echo "No env"
+    *) echo "No env";;
 
 esac 
