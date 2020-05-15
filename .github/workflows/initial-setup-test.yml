@@ -32,10 +32,11 @@ jobs:
           echo "BUILD TARGET: " + $BUILD_TARGET
           echo "PAGE SHA: " + $PAGE_SHA
       - name: Determine approp dotenv file. Print dotenv.
+        uses: allenevans/set-env@v1.0.0
+        with:
+          VERTICAL: $(./fastlane/build-variant.sh $BUILD_TARGET)
         # env: VERTICAL: $(./fastlane/build-variant.sh $BUILD_TARGET)
-        run: |
-            echo "::set-env name=VERTICAL::$(echo -n "Hello World")"
-            echo $VERTICAL
+        run: echo $VERTICAL
         
       # - name: Cache Pods dependencies
       #   uses: actions/cache@v1
