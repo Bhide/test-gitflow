@@ -2,14 +2,14 @@ name: Build Project
 
 on:
   gollum:
-   branches:
-    - master
+   # branches:
+   #  - master
 
-  push:
-   branches:
-     - test-branch
+  # push:
+  #  branches:
+  #    - test-branch
 
-  repository_dispatch:
+  # repository_dispatch:
 
 jobs:
   build:
@@ -17,9 +17,9 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - uses: actions/checkout@v1
-        with:
-            ref: test-branch
+      # - uses: actions/checkout@v1
+      #   with:
+      #       ref: test-branch
         
       - name: Switch XCode Version
         run: sudo xcode-select -s /Applications/Xcode_11.4.1.app
