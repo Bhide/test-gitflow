@@ -34,7 +34,7 @@ jobs:
       - name: Determine approp dotenv file. Print dotenv.
         run: ./fastlane/build-variant.sh
         env:
-            TARGET: $BUILD_TARGET
+            TARGET: ${{env.BUILD_TARGET }}
         # env: VERTICAL: $(./fastlane/build-variant.sh $BUILD_TARGET)
       - name: Print VERTICAL
         run: echo $VERTICAL
