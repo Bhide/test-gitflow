@@ -27,7 +27,10 @@ jobs:
       - name: Access payload
         env: 
           BUILD_TARGET: ${{ github.event.pages[0].page_name }}
-        run: echo $BUILD_TARGET
+          PAGE_SHA: ${{ github.event.pages[0].sha }}
+        run: |
+          echo "BUILD TARGET: " + $BUILD_TARGET
+          echo "PAGE SHA: " + $PAGE_SHA
         
       # - name: Cache Pods dependencies
       #   uses: actions/cache@v1
