@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Build variant: " "$1"
+# echo "Build variant: " "$1"
 
 TARGET="$1"
 
@@ -74,5 +74,7 @@ case "$TARGET" in
     "Member ID Stage") echo "MemberID-Stage" ;; 
 #case 4
     "Member ID Dev") echo "MemberID-Dev" ;; 
+
+    *) echo "No env"
 
 esac 
