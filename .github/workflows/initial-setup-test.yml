@@ -25,7 +25,8 @@ jobs:
         run: sudo xcode-select -s /Applications/Xcode_11.4.1.app
 
       - name: Access payload
-        run: echo ${{ github.event.pages[0].page_name }}
+        env: BUILD_TARGET: ${{ github.event.pages[0].page_name }}
+        run: echo $BUILD_TARGET
         
       # - name: Cache Pods dependencies
       #   uses: actions/cache@v1
