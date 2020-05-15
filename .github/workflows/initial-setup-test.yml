@@ -32,7 +32,9 @@ jobs:
           echo "BUILD TARGET: " + $BUILD_TARGET
           echo "PAGE SHA: " + $PAGE_SHA
       - name: Determine approp dotenv file. Print dotenv.
-        run: echo "::set-env name=VERTICAL::AlumniID-Dev"
+        run: |
+          ./fastlane/build-variant.sh $BUILD_TARGET
+          echo "::set-env name=VERTICAL::AlumniID-Dev"
         # env: VERTICAL: $(./fastlane/build-variant.sh $BUILD_TARGET)
       - name: Print VERTICAL
         run: echo $VERTICAL
