@@ -24,13 +24,18 @@ jobs:
       - name: Switch XCode Version
         run: sudo xcode-select -s /Applications/Xcode_11.4.1.app
 
-      - name: Access payload
+      - name: Access Gollum Payload
         env: 
           BUILD_TARGET: ${{ github.event.pages[0].page_name }}
           PAGE_SHA: ${{ github.event.pages[0].sha }}
         run: |
           echo "BUILD TARGET: " + $BUILD_TARGET
           echo "PAGE SHA: " + $PAGE_SHA
+      - name: Determine approp dotenv file. Print dotenv.
+        env: VERTICAL: $(./fastlane/build-variant.sh $BUILD_TARGET)
+        run: |
+            echo ::set-env name=VERTICAL::$(./fastlane/build-variant.sh $BUILD_TARGET)
+            echo $VERTICAL
         
       # - name: Cache Pods dependencies
       #   uses: actions/cache@v1
