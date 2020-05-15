@@ -34,7 +34,7 @@ jobs:
       - name: Determine approp dotenv file. Print dotenv.
         # env: VERTICAL: $(./fastlane/build-variant.sh $BUILD_TARGET)
         run: |
-            echo "::set-env name=VERTICAL::$(./fastlane/build-variant.sh $BUILD_TARGET)"
+            echo "::set-env name=VERTICAL::$(echo -n "Hello World")"
             echo $VERTICAL
         
       # - name: Cache Pods dependencies
