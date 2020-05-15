@@ -36,6 +36,7 @@ jobs:
         with:
           VERTICAL: $(./fastlane/build-variant.sh $BUILD_TARGET)
         # env: VERTICAL: $(./fastlane/build-variant.sh $BUILD_TARGET)
+      - name: Print VERTICAL
         run: echo $VERTICAL
         
       # - name: Cache Pods dependencies
