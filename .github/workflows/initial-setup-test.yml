@@ -33,7 +33,7 @@ jobs:
           echo "PAGE SHA: " + $PAGE_SHA
       - name: Determine approp dotenv file. Print dotenv.
         run: |
-          ./fastlane/build-variant.sh $BUILD_TARGET
+          ./fastlane/build-variant.sh "$BUILD_TARGET"
           echo "::set-env name=VERTICAL::AlumniID-Dev"
         # env: VERTICAL: $(./fastlane/build-variant.sh $BUILD_TARGET)
       - name: Print VERTICAL
