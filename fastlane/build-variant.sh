@@ -5,6 +5,8 @@
 
 TARGET="$1"
 
+echo $TARGET
+
 case "$TARGET" in 
     #case 1 
     "Alumni-ID-Stage") echo "AlumniID-Stage" ;; 
