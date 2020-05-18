@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# echo "Build variant: " "$1"
+echo "$1"
 
 # TARGET="$1"
 
