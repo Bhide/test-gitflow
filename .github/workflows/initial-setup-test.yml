@@ -91,6 +91,6 @@ jobs:
       - name: Fastlane trigger
         run: |
           echo ${{ github.event.pages[0].page_name }}
-          fastlane vertical_app_build --env ${{ github.event.pages[0].page_name }}" build_num:$GITHUB_RUN_NUMBER firebase_secret:""
+          fastlane vertical_app_build --env ${{ github.event.pages[0].page_name }} build_num:$GITHUB_RUN_NUMBER firebase_secret:""
 
 
