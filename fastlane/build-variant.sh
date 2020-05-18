@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "Build Target:"
-echo "$1"
+# echo "Build Target:"
+# echo "$1"
 
 TARGET="$1"
 
