@@ -54,22 +54,16 @@ lane :vertical_app_build do
 # TEAM_ID=6SPCVN67S3
 # IPA_FILE_NAME=Alumni ID-Dev.ipa
 
-# echo "TEAM ID:"
-# echo $1
-# echo "CERTIFICATE:"
-# echo $2
-# echo "APP BUNDLE ID:"
-# echo $3
-# echo "PROVISIONING APP:"
-# echo $4
-# echo "WIDGET BUNDLE ID:"
-# echo $5
-# echo "PROVISIONING WIDGET:"
-# echo $6
+  puts "build #"
+  puts options[:build_num]
+  puts ENV['TARGET']
+  puts ENV['CONFIGURATION']
+  puts ENV['TARGET']
+  puts ENV['PROVISIONING_PROFILE']
 
-  sh "cd ..; pwd; fastlane/exportoptions.sh #{ENV['TEAM_ID']} #{ENV['CERTIFICATE']} #{ENV['BUNDLE_ID']} #{ENV['PROVISIONING_PROFILE']} #{ENV['BUNDLE_ID_WIDGET']} #{ENV['PROVISIONING_PROFILE_WIDGET']}"
+  # sh "cd ..; pwd; fastlane/exportoptions.sh #{ENV['TEAM_ID']} #{ENV['CERTIFICATE']} #{ENV['BUNDLE_ID']} #{ENV['PROVISIONING_PROFILE']} #{ENV['BUNDLE_ID_WIDGET']} #{ENV['PROVISIONING_PROFILE_WIDGET']}"
 
-  sh "cd ..; pwd; fastlane/build_app.sh #{ENV['CONFIGURATION']} #{ENV['PROVISIONING_PROFILE']} #{ENV['TARGET']}"
+  # sh "cd ..; pwd; fastlane/build_app.sh #{ENV['CONFIGURATION']} #{ENV['PROVISIONING_PROFILE']} #{ENV['TARGET']}"
 
 
   # )

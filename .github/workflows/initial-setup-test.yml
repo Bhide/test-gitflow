@@ -88,5 +88,7 @@ jobs:
       #   with:
       #       lane: 'vertical_app_build --env AlumniID-Dev'
 
+      - name: Fastlane trigger
+        run: fastlane vertical_app_build --env ${{env.BUILD_TARGET }} build_num:$GITHUB_RUN_NUMBER firebase_secret:""
 
 

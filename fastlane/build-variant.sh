@@ -5,7 +5,7 @@
 
 TARGET="$1"
 
-echo "$TARGET"
+# echo "$TARGET"
 
 case "$TARGET" in 
     #case 1 
