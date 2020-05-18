@@ -36,7 +36,6 @@ jobs:
         env:
           TARGET: $(./fastlane/build-variant.sh ${{env.BUILD_TARGET }})
             # TARGET: ${{env.BUILD_TARGET }}
-          }
         # env: VERTICAL: $(./fastlane/build-variant.sh $BUILD_TARGET)
       - name: Print VERTICAL
         run: echo $TARGET
