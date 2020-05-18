@@ -29,15 +29,17 @@ jobs:
           BUILD_TARGET: ${{ github.event.pages[0].page_name }}
           PAGE_SHA: ${{ github.event.pages[0].sha }}
         run: |
-          echo "BUILD TARGET: " + $BUILD_TARGET
-          echo "PAGE SHA: " + $PAGE_SHA
+          echo "BUILD TARGET: " $BUILD_TARGET
+          echo "PAGE SHA: "  $PAGE_SHA
       - name: Determine approp dotenv file. Print dotenv.
         run: ./fastlane/build-variant.sh
         env:
-            TARGET: ${{env.BUILD_TARGET }}
+          TARGET: $(./fastlane/build-variant.sh ${{env.BUILD_TARGET }})
+            # TARGET: ${{env.BUILD_TARGET }}
+          }
         # env: VERTICAL: $(./fastlane/build-variant.sh $BUILD_TARGET)
       - name: Print VERTICAL
-        run: echo $VERTICAL
+        run: echo $TARGET
         
       # - name: Cache Pods dependencies
       #   uses: actions/cache@v1

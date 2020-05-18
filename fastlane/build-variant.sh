@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "Build variant: " "$1"
+# echo "Build variant: " "$1"
 
-TARGET="$1"
+# TARGET="$1"
 
 case "$TARGET" in 
     #case 1 
