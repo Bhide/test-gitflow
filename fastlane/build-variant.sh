@@ -1,8 +1,9 @@
 #!/bin/bash
 
+echo "Build Target:"
 echo "$1"
 
-# TARGET="$1"
+TARGET="$1"
 
 case "$TARGET" in 
     #case 1 
